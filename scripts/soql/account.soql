@@ -3,4 +3,6 @@
 //     query text and running the command:
 //     SFDX: Execute SOQL Query with Currently Selected Text
 
-SELECT Id, Name FROM Account
+SELECT StageName, SUM(Amount) Total_Amount
+      FROM Opportunity
+      GROUP BY StageName
