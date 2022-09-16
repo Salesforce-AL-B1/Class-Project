@@ -5,5 +5,14 @@
 // You can also execute the entire file by running the command:
 //     SFDX: Execute Anonymous Apex with Editor Contents
 
-Account a = new Account(Name='Test acc');
-ApexPractice.isKeyAccount(a); 
+
+BatchCleanUpCases b = new BatchCleanUpCases(); 
+
+Database.executeBatch(b , 10);
+
+
+// How to schedule the Schedulable job 
+
+System.schedule('Cleanup Cases 1st day of the month', 
+                    '0 0 0 1 * ? *', 
+                    new ScheduledCaseCleanUp() ); 

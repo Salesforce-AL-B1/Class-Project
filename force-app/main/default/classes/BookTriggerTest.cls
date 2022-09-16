@@ -8,7 +8,7 @@ public class BookTriggerTest {
     insert b1;
     Test.stopTest();
 
-    Book__c savedB1 = [SELECT Price__c FROM Book__c];
+    Book__c savedB1 = [SELECT Price__c FROM Book__c LIMIT 1];
     System.assertEquals(5, savedB1.Price__c);
   }
 }

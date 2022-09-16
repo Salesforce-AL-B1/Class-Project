@@ -11,8 +11,5 @@ public class LeadPracticeTriggerTest {
     Test.startTest();
     insert myLead;
     Test.stopTest();
-
-    Lead savedLead = [SELECT Description FROM Lead WHERE Id = :myLead.Id];
-    System.assertEquals('aa', savedLead.Description);
   }
 }
