@@ -15,7 +15,6 @@ export default class HelloComponent extends LightningElement {
     this.greeting = event.target.value;
     // print out in browser console
     console.log("change detected " + event.target.value);
-    console.log("element name " + event.target.getAttribute("name"));
   }
 
   lastNameHandler(event) {
