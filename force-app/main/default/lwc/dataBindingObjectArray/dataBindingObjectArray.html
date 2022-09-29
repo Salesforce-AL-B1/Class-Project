@@ -1,0 +1,26 @@
+<template>
+  <!-- Add City and State lightning input fields -->
+  <!-- Add City and State paraghraph element to display interactivly what user type -->
+
+  <lightning-card title="Data binding for object" icon-name="custom:custom14">
+    <div class="slds-var-m-around_medium">
+      <lightning-input
+        type="text"
+        name="city"
+        label="city"
+        onchange={handleLocationChange}
+      >
+      </lightning-input>
+      <lightning-input
+        type="text"
+        name="state"
+        label="state"
+        onchange={handleLocationChange}
+      >
+      </lightning-input>
+
+      <p>City value : {location.city}</p>
+      <p>State value : {location.state}</p>
+    </div>
+  </lightning-card>
+</template>
