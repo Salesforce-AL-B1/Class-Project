@@ -1,0 +1,15 @@
+<template>
+  <lightning-card title="HelloForEach" icon-name="custom:custom14">
+    <ul class="slds-var-m-around_medium">
+      <template for:each={fruits} for:item="each" for:index="indexNumber">
+        <li key={each}>Fruite {indexNumber} name is {each}</li>
+      </template>
+    </ul>
+
+    <ul class="slds-var-m-around_medium">
+      <template for:each={contacts} for:item="each">
+        <li key={each.Id}>Name: {each.Name} Title: {each.Title}</li>
+      </template>
+    </ul>
+  </lightning-card>
+</template>
