@@ -1,6 +1,7 @@
 import { LightningElement, track } from "lwc";
 
 export default class DataBindingObjectArray extends LightningElement {
+ 
   // create a property for location
   //type object and has 2 keys for city and state
   //To tell the framework to observe changes to the properties of an object, decorate the field with @track.
