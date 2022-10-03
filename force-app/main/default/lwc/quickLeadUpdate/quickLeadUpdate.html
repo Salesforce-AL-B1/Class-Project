@@ -1,0 +1,18 @@
+<template>
+  <lightning-card title="Lead Quick Update" icon-name="standard:lead">
+    <div class="slds-var-m-around_medium">
+      <lightning-record-edit-form
+        record-id={recordId}
+        object-api-name={objectApiName}
+      >
+        <lightning-input-field field-name={phoneField}></lightning-input-field>
+        <lightning-input-field field-name={sourceField}></lightning-input-field>
+
+        <div class="slds-var-m-top_medium">
+          <lightning-button variant="brand" type="submit" label="Save">
+          </lightning-button>
+        </div>
+      </lightning-record-edit-form>
+    </div>
+  </lightning-card>
+</template>

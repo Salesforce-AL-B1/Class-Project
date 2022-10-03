@@ -1,0 +1,18 @@
+<template>
+  <lightning-card title="Lead Widget" icon-name="standard:lead">
+    <div class="slds-var-m-around_medium">
+      <lightning-record-view-form
+        record-id={recordId}
+        object-api-name={objectApiName}
+      >
+        <lightning-output-field field-name={nameField}></lightning-output-field>
+        <lightning-output-field
+          field-name={companyField}
+        ></lightning-output-field>
+        <lightning-output-field
+          field-name={phoneField}
+        ></lightning-output-field>
+      </lightning-record-view-form>
+    </div>
+  </lightning-card>
+</template>
