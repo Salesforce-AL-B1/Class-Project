@@ -1,7 +1,5 @@
 <template>
-  
   <lightning-card title="HelloForEach" icon-name="custom:custom14">
-    
     <ul class="slds-var-m-around_medium">
       <template for:each={fruits} for:item="each" for:index="indexNumber">
         <li key={each}>Fruit {indexNumber} name is {each}</li>
@@ -10,30 +8,23 @@
 
     <!-- using iterator for fruit  -->
     <ul class="slds-var-m-around_medium">
-        <template iterator:each={fruits}>
-            <li key={each.value}>
-                Fruit name is {each.value}
-            </li>
-        </template>
+      <template iterator:each={fruits}>
+        <li key={each.value}>Fruit name is {each.value}</li>
+      </template>
     </ul>
-
 
     <ul class="slds-var-m-around_medium">
       <template for:each={contacts} for:item="each">
         <li key={each.Id}>Name: {each.Name} Title: {each.Title}</li>
       </template>
-    </ul> 
-
-    <ul class="slds-var-m-around_medium">
-
-        <template iterator:it={contacts}>
-          
-          <li key={it.value.Id}>
-                Name : {it.value.Name}  Title: {it.value.Title}
-          </li>
-        </template>
     </ul>
 
-
+    <ul class="slds-var-m-around_medium">
+      <template iterator:it={contacts}>
+        <li key={it.value.Id}>
+          Name : {it.value.Name} Title: {it.value.Title}
+        </li>
+      </template>
+    </ul>
   </lightning-card>
 </template>

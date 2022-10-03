@@ -1,25 +1,22 @@
 <template>
-    <lightning-card title="Bike Card" icon-name="custom:custom14">
-        
-        <!-- <div id="waiting" if:false={ready}>Loading…</div> -->
+  <lightning-card title="Bike Card" icon-name="custom:custom14">
+    <!-- <div id="waiting" if:false={ready}>Loading…</div> -->
 
-        <div if:true={ready} class="slds-var-m-around_medium" id="display" >
-           <!-- This is how we can pass down data from app component to bike component
+    <div if:true={ready} class="slds-var-m-around_medium" id="display">
+      <!-- This is how we can pass down data from app component to bike component
              bike property of Bike component is being filled by the value of
              app component bike object property  
              app is parent component , bike is child component -->
-            <!-- <div>Name: {name}</div>
+      <!-- <div>Name: {name}</div>
                 <div>Description: {description}</div>
                 <div>Category: {category}</div>
                 <div>Material: {material}</div>
                 <div>Price: {price}</div>
                 <div><img src={pictureUrl}/></div>
              -->
-            <c-bike child-bike ={bike} > </c-bike>
-            <c-hello-component>  </c-hello-component>
-            <!-- <c-hello-conditional-rendering> </c-hello-conditional-rendering> -->
-
-        </div>
-
-    </lightning-card>
+      <c-bike child-bike={bike}> </c-bike>
+      <c-hello-component> </c-hello-component>
+      <!-- <c-hello-conditional-rendering> </c-hello-conditional-rendering> -->
+    </div>
+  </lightning-card>
 </template>
