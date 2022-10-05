@@ -1,11 +1,14 @@
 import getSingleAccount from "@salesforce/apex/AccountController.getSingleAccount";
 import { LightningElement, wire } from "lwc";
-import { getSObjectValue } from "@salesforce/apex";
+// import { getSObjectValue } from "@salesforce/apex";
 //import ACCOUNT_OBJECT from '@salesforce/schema/Account';
-import ACCOUNT_NAME_FIELD from "@salesforce/schema/Account.Name";
-import REVENUE_FIELD from "@salesforce/schema/Account.AnnualRevenue";
+// import ACCOUNT_NAME_FIELD from "@salesforce/schema/Account.Name";
+// import REVENUE_FIELD from "@salesforce/schema/Account.AnnualRevenue";
 
 export default class WireApexMethod extends LightningElement {
+  @wire(getSingleAccount)
+  account;
+  /**
   account;
 
   @wire(getSingleAccount)
@@ -28,4 +31,5 @@ export default class WireApexMethod extends LightningElement {
   get revenue() {
     return getSObjectValue(this.account, REVENUE_FIELD);
   }
+   */
 }
