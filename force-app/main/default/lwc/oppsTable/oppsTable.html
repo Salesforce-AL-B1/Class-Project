@@ -6,7 +6,12 @@
   >
     <div class="slds-var-m-around_medium">
       <template if:true={opps.data}>
-        <lightning-datatable key-field="Id" data={opps.data} columns={columns}>
+        <lightning-datatable 
+              key-field="Id" 
+              data={opps.data} 
+              columns={columns}
+              onrowaction={handleRowLevelAction}
+              >
         </lightning-datatable>
       </template>
     </div>

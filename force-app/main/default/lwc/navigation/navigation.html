@@ -1,0 +1,38 @@
+<template>
+  <lightning-card title="Navigation Buttons" icon-name="custom:custom14">
+    <div class="slds-var-m-around_medium">
+
+      <lightning-button
+        variant="brand"
+        label="Account Home"
+        class="slds-var-m-left_x-small"
+        onclick={navigateToAccountHome}
+      ></lightning-button>
+
+    </br>
+
+      <lightning-button
+        variant="brand"
+        label="New Account"
+        class="slds-var-m-left_x-small"
+        onclick={navigateToNewAccountModal}
+        ></lightning-button>
+      </br>
+        <lightning-button
+          variant="brand"
+          label="Go To Record"
+          class="slds-var-m-left_x-small"
+          onclick={navigateToMyAccountRecord}
+          ></lightning-button>
+        </br>
+          <lightning-button
+            variant="brand"
+            label="Edit My Cool Record"
+            class="slds-var-m-left_x-small"
+            onclick={editMyCoolAccountRecord}
+          ></lightning-button>
+        </br>
+
+    </div>
+  </lightning-card>
+</template>
