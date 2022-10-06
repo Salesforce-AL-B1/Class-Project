@@ -1,4 +1,5 @@
-import getAllOpps from "@salesforce/apex/OppsController.getAllOpps";
+//import getAllOpps from "@salesforce/apex/OppsController.getAllOpps";
+import getAllOppsByStage from "@salesforce/apex/OppsController.getAllOppsByStage";
 import { LightningElement, wire } from "lwc";
 
 // display opps name , stage , amount
@@ -12,6 +13,7 @@ const COLUMNS = [
 export default class OppsTable extends LightningElement {
   columns = COLUMNS;
 
-  @wire(getAllOpps)
+  //@wire(getAllOpps)
+  @wire(getAllOppsByStage, { stage: "Closed Won" })
   opps;
 }
